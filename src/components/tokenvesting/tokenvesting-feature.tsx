@@ -4,12 +4,12 @@ import { useWallet } from '@solana/wallet-adapter-react'
 import { WalletButton } from '../solana/solana-provider'
 import { AppHero, ellipsify } from '../ui/ui-layout'
 import { ExplorerLink } from '../cluster/cluster-ui'
-import { useTokenvestingProgram } from './tokenvesting-data-access'
-import { TokenvestingCreate, TokenvestingList } from './tokenvesting-ui'
+import { useVestingProgram } from './tokenvesting-data-access'
+import { VestingCreate, VestingList } from './tokenvesting-ui'
 
 export default function TokenvestingFeature() {
   const { publicKey } = useWallet()
-  const { programId } = useTokenvestingProgram()
+  const { programId } = useVestingProgram()
 
   return publicKey ? (
     <div>
@@ -22,9 +22,9 @@ export default function TokenvestingFeature() {
         <p className="mb-6">
           <ExplorerLink path={`account/${programId}`} label={ellipsify(programId.toString())} />
         </p>
-        <TokenvestingCreate />
+        <VestingCreate />
       </AppHero>
-      <TokenvestingList />
+      <VestingList />
     </div>
   ) : (
     <div className="max-w-4xl mx-auto">
