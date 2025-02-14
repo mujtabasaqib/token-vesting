@@ -5,7 +5,7 @@
  * IDL can be found at `target/idl/tokenvesting.json`.
  */
 export type Tokenvesting = {
-  "address": "coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF",
+  "address": "Gk8DhWZkoxr7jZ5Dvrw4PV4fS14qk1h2kySTZDroYauf",
   "metadata": {
     "name": "tokenvesting",
     "version": "0.1.0",
